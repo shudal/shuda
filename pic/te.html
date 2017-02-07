@@ -1,0 +1,181 @@
+<a href='http://www.shuda.site'>树大</a>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<br><br>
+<html>
+<input type="button" value="上一张" onclick="previous();">
+<input type="button" value="下一张" onclick="next();">
+<input type="button" value="幻灯片" onclick="pp();">
+<input type="button" value="暂停" onclick="pau()"><br><br>
+<strong>类型选择:</strong><br>
+<a href='#' onclick='huge(1);'>jpg</a>
+<a href='#' onclick='huge(2);'>png</a>
+<a href='#' onclick='huge(3);'>jpeg</a>
+
+
+<br id="bbbr">
+切换到第
+<input id="texts" type="text" value="1" size="5">
+张
+<input type="button" value="确定" onclick="change();">
+<br>
+<strong>总张数:</strong>
+<a href='#' id='tn'>1904</a>
+<br>
+<br>
+<strong>源:</strong><br>
+<a href='#' onclick='huyu(1);'>t</a>
+<a href='#' onclick='huyu(2);'>t2</a>
+<a href='#' onclick='huyu(3);'>t3</a>
+<a href='#' onclick='huyu(4);'>t4</a>
+<a href='#' onclick='huyu(5);'>t5</a>
+<a href='#' onclick='huyu(6);'>t6</a>
+<a href='#' onclick='huyu(7);'>t7</a>
+<head>
+<title>My Pictures!</title>
+<script>
+
+	var k;
+	var i=0;
+	var n=1;
+        var nup=1904;
+        var dizhi='http://okabavpou.bkt.clouddn.com/t';
+        var houzui='.jpg';
+        
+        var mjpg=1904;
+        var mpng=177;
+        var mjpeg=137;
+        
+        //切换源
+        function huyu(s){
+          switch(s){
+            case 2:
+              dizhi='http://okabavpou.bkt.clouddn.com/t2';
+              mjpg=1904;
+              mpng=177;
+              mjpeg=137;
+            break;
+            case 3:
+              dizhi='http://okabavpou.bkt.clouddn.com/t3';
+              mjpg=1459;
+              mpng=52;
+              mjpeg=18;
+            break; 
+            case 4:
+              dizhi='http://okabavpou.bkt.clouddn.com/t4';
+              mjpg=1044;
+              mpng=19;
+              mjpeg=212;
+            break; 
+            case 6:
+              dizhi='http://okabavpou.bkt.clouddn.com/t6';
+              mjpg=2101;
+              mpng=247;
+              mjpeg=528;
+            break; 
+            case 1://total 1781
+              dizhi='http://okabavpou.bkt.clouddn.com/t';
+              mjpg=1469;
+              mpng=192;
+              mjpeg=120;
+            break; 
+            case 5: //totoal 3856
+              dizhi='http://okabavpou.bkt.clouddn.com/t5';
+              mjpg=2101;
+              mpng=247;
+              mjpeg=528;
+            break; 
+            case 7: //total 1702
+              dizhi='http://okabavpou.bkt.clouddn.com/t7';
+              mjpg=2101;
+              mpng=247;
+              mjpeg=528;
+            break; 
+          }
+          document.getElementById('tn').innerHTML=mjpg+"";
+          
+        }
+        
+        //切换后缀格式  1:jpg 2:png 3：jpeg
+        function huge(s){
+          switch(s){
+            case 1:
+              houzui='.jpg';
+              nup=mjpg ;
+              document.getElementById('tn').innerHTML=mjpg+"";
+            break;
+            case 3:
+              houzui='.jpeg';
+              nup=mjpeg ;
+              document.getElementById('tn').innerHTML=mjpeg+"";
+            break; 
+            case 2:
+              houzui='.png';
+              nup=mpng;
+              document.getElementById('tn').innerHTML=mpng+"";
+            break; 
+            }
+        }
+        //功能
+	function next(){
+	  var nextp=document.getElementById("imgs");
+	  i++;
+
+	  if(i>nup){i=1;}
+	  var q=dizhi+i+houzui;
+          nextp.setAttribute("src",q);
+          shown();
+	}
+	function previous(){ 
+	  var prev=document.getElementById("imgs");
+	  i--;
+	  if(i<1){i=nup;};
+          var q=dizhi+i+houzui;
+          prev.setAttribute("src",q);
+	  shown();
+	}
+        function change(){
+	  var x=document.getElementById("texts").value;
+          var prev=document.getElementById("imgs");
+          var q=dizhi+x+houzui;
+          i=x
+          prev.setAttribute("src",q);
+          
+	}
+        function pp(){
+          k=setInterval("next()",1000);
+                     }
+	function pau(){
+	  var l=clearInterval(k);
+                      }
+	    
+        function ren(){
+	    var y=document.getElementById("imgs").getAttribute("src").split(".");
+	    var x=y[0];
+            var f=Number(x);
+            return f;
+		      }
+        function shown(){
+	    var x=ren();
+	    var xp=document.getElementById("texts");
+	    xp.setAttribute("value",x);
+			}
+
+  
+</script>
+</head>
+<body id="bbody" bgcolor="">
+<br>
+<font color="red">
+<h1 align="center">My Pictures!</h1>
+</font>
+<center>
+<br>
+<img id="imgs" border="3" src="http://oka65hkln.bkt.clouddn.com/1.jpg"  >
+
+
+     
+
+ 
+</form>
+</body>
+</html>

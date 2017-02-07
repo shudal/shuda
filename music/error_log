@@ -1,0 +1,8 @@
+[03-Feb-2017 05:37:08 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/shudasit/public_html/music/sys.php on line 23
+[03-Feb-2017 05:40:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/shudasit/public_html/music/sys.php on line 24
+[03-Feb-2017 05:40:44 UTC] PHP Fatal error:  Call to undefined function decode() in /home/shudasit/public_html/music/sys.php on line 21
+[03-Feb-2017 06:08:58 UTC] PHP Warning:  fread() expects exactly 2 parameters, 1 given in /home/shudasit/public_html/music/sys.php on line 25
+[03-Feb-2017 06:08:59 UTC] PHP Warning:  fread() expects exactly 2 parameters, 1 given in /home/shudasit/public_html/music/sys.php on line 25
+[03-Feb-2017 06:09:02 UTC] PHP Warning:  fread() expects exactly 2 parameters, 1 given in /home/shudasit/public_html/music/sys.php on line 25
+[03-Feb-2017 06:09:08 UTC] PHP Warning:  fread() expects exactly 2 parameters, 1 given in /home/shudasit/public_html/music/sys.php on line 25
+[03-Feb-2017 06:20:25 UTC] PHP Fatal error:  Call to undefined function decode() in /home/shudasit/public_html/music/sys.php on line 20
