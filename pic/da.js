@@ -1,4 +1,3 @@
-<script>
     var y=1
     var i=-1;
     var nup=1786;
@@ -131,5 +130,4 @@
         
 
  
-  
-</script>
+ 
